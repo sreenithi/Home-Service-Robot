@@ -3,6 +3,6 @@ xterm -e " roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$(rospa
 sleep 5
 xterm -e " roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$(rospack find maps)/map/map.yaml initial_pose_a:=-1.5707" &
 sleep 5
-xterm -e " roslaunch turtlebot_rviz_launchers view_navigation.launch" &
+xterm -e " rosrun rviz rviz -d $(rospack find rviz_config)/rviz/config.rviz" &
 sleep 20
 xterm -e " rosrun add_markers add_markers"
