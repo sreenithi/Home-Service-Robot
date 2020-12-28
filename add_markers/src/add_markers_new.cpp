@@ -114,8 +114,8 @@ int main( int argc, char** argv )
 
 
   // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
-  marker_dropoff_pose.position.x = 1.0;
-  marker_dropoff_pose.position.y = 1.0;
+  marker_dropoff_pose.position.x = -2.0;
+  marker_dropoff_pose.position.y = 6.0;
   marker_dropoff_pose.orientation.w = 1.0;    
 
   MarkerVisualisation marker(marker_pickup_pose, marker_dropoff_pose);
