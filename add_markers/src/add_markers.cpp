@@ -3,7 +3,7 @@
 
 int main( int argc, char** argv )
 {
-  ros::init(argc, argv, "add_markers");
+  ros::init(argc, argv, "add_markers_display");
   ros::NodeHandle n;
   ros::Duration r(5);
   ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("marker_visualisation", 1);
@@ -28,8 +28,8 @@ int main( int argc, char** argv )
   marker.action = visualization_msgs::Marker::ADD;
 
   // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
-  marker.pose.position.x = -5.0;
-  marker.pose.position.y = -5.0;
+  marker.pose.position.x = -7.0;
+  marker.pose.position.y = -1.2;
   marker.pose.position.z = 0;
   marker.pose.orientation.x = 0.0;
   marker.pose.orientation.y = 0.0;
@@ -71,8 +71,9 @@ int main( int argc, char** argv )
 
   r.sleep();
 
+  marker.action = visualization_msgs::Marker::ADD;
   // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
-  marker.pose.position.x = -2.0;
+  marker.pose.position.x = -2.2;
   marker.pose.position.y = 6.0;
   marker.pose.position.z = 0;
   marker.pose.orientation.x = 0.0;
@@ -80,7 +81,7 @@ int main( int argc, char** argv )
   marker.pose.orientation.z = 0.0;
   marker.pose.orientation.w = 1.0;    
 
-  marker.lifetime = ros::Duration();
+//   marker.lifetime = ros::Duration();
   ROS_INFO("Publishing Marker at dropoff");
   marker_pub.publish(marker);
   

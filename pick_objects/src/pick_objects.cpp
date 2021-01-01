@@ -29,8 +29,8 @@ int main(int argc, char** argv){
   pickup_zone.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach
-  pickup_zone.target_pose.pose.position.x = -5.0;
-  pickup_zone.target_pose.pose.position.y = -5.0;
+  pickup_zone.target_pose.pose.position.x = -7.0;
+  pickup_zone.target_pose.pose.position.y = -1.2;
   pickup_zone.target_pose.pose.orientation.w = 1.0;
 
    // Send the goal position and orientation for the robot to reach
@@ -60,7 +60,7 @@ int main(int argc, char** argv){
   dropoff_zone.target_pose.header.frame_id = "map";
   dropoff_zone.target_pose.header.stamp = ros::Time::now(); 
   
-  dropoff_zone.target_pose.pose.position.x = -2.0;
+  dropoff_zone.target_pose.pose.position.x = -2.2;
   dropoff_zone.target_pose.pose.position.y = 6.0;
   dropoff_zone.target_pose.pose.orientation.w = 1.0;
   

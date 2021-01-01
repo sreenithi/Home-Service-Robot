@@ -108,13 +108,13 @@ int main( int argc, char** argv )
   geometry_msgs::Pose marker_pickup_pose, marker_dropoff_pose;
 
   // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
-  marker_pickup_pose.position.x = -5.0;
-  marker_pickup_pose.position.y = -5.0;
+  marker_pickup_pose.position.x = -7.0;
+  marker_pickup_pose.position.y = -1.2;
   marker_pickup_pose.orientation.w = 1.0;
 
 
   // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
-  marker_dropoff_pose.position.x = -2.0;
+  marker_dropoff_pose.position.x = -2.2;
   marker_dropoff_pose.position.y = 6.0;
   marker_dropoff_pose.orientation.w = 1.0;    
 

@@ -207,4 +207,6 @@ include_directories(
 include_directories(include ${catkin_INCLUDE_DIRS})
 add_executable(add_markers src/add_markers_wait_for_robot.cpp)
 target_link_libraries(add_markers ${catkin_LIBRARIES})
-add_dependencies(add_markers add_markers_generate_messages_cpp)
+
+add_executable(add_markers_display src/add_markers.cpp)
+target_link_libraries(add_markers_display ${catkin_LIBRARIES})
